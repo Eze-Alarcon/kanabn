@@ -1,7 +1,8 @@
 export default function Home() {
   return (
     <>
-    <h2 className="bg-kred-300">Hola</h2>
+    <h2 className="text-kred">Hola</h2>
+    <div className="h-10 w-10 bg-kred">bahsd</div>
     </>
   )
 }
