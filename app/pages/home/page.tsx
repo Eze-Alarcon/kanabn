@@ -10,10 +10,10 @@ const empty = true
 
 export default function Home () {
   return (
-    <main className='w-full h-[100%] bg-kcianli bg-red-500'>
+    <>
       {
         empty && <EmptyBoard />
       }
-    </main>
+    </>
   )
 }

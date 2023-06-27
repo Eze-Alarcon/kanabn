@@ -2,7 +2,7 @@ import React from 'react'
 
 export default function HeaderComp () {
   return (
-    <nav className='w-full h-[64px] flex flex-row'>
+    <nav className='w-full h-16 flex flex-row'>
       <div className='w-3/12 flex items-center justify-center'>
         <img className='w-[34px] h-[35px]' src='/styles/assets/logo-mobile.svg' alt='logo-mobile.svg' />
       </div>
