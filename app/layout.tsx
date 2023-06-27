@@ -10,7 +10,7 @@ const plusJakartaSans = Plus_Jakarta_Sans({ subsets: ['latin'] })
 
 export default function RootLayout ({children}: {children: ReactNode}) {
 
-  const [modalTablet, setModalTablet] = useState(true);
+  const [modalTablet, setModalTablet] = useState(false);
 
   const handleClick = () => 
   {
