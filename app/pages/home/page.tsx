@@ -1,5 +1,6 @@
 import { CardColumn } from '@/app/components/CardColumn'
 import EmptyBoard from '@/app/components/EmptyBoard'
+import Card from '@/app/components/card'
 import React from 'react'
 
 export const metadata = {
@@ -16,7 +17,7 @@ export default function Home () {
         empty && <EmptyBoard />
       }
       {
-        !empty && <CardColumn><EmptyBoard /></CardColumn>
+        !empty && <CardColumn><Card /></CardColumn>
       }
     </>
   )
