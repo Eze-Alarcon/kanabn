@@ -1,4 +1,5 @@
 import React from 'react'
+import Card from '@/app/components/card'
 
 export const metadata = {
   title: 'Bienvenido',
@@ -8,6 +9,8 @@ export default function Start () {
   return (
     <>
       <h2 className='text-kred'>Pagina de Bienvenida</h2>
+      <Card/>
+
     </>
   )
 }
