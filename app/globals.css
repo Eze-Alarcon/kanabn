@@ -2,3 +2,14 @@
 @tailwind components;
 @tailwind utilities;
 
+  
+  .enter {
+    transform: translateX(0%);
+    transition: 0.5s;
+  }
+  
+ .exit {
+    transform: translateX(-100%);
+    transition: 0.5s;
+    
+  }
