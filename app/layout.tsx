@@ -21,7 +21,7 @@ export default function RootLayout ({
 
       <body className={`${plusJakartaSans.className} flex flex-col h-[100svh]`}>
         <HeaderComp />
-        <main className='w-full h-full bg-kcianli'>
+        <main className='w-full h-full bg-kcianli px-4 pt-6'>
           {children}
         </main>
       </body>
