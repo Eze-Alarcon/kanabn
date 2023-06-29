@@ -3,6 +3,7 @@
 import React, { MouseEventHandler, useState } from 'react'
 import Button from './button'
 import { createPortal } from 'react-dom'
+import { BoardModal } from './BoardModal'
 
 export default function HeaderComp ({ handleClick } : {handleClick: MouseEventHandler}) {
   const [modalBoard, setBoardModal] = useState(false)
@@ -33,7 +34,7 @@ export default function HeaderComp ({ handleClick } : {handleClick: MouseEventHa
         </div>
 
       </div>
-      {modalBoard && createPortal(<div className='absolute h-[100svh] w-screen bg-gray-600 grid place-content-center bg-opacity-90'><p className='bg-red-500'>PORTAL</p></div>, document.body)}
+      {modalBoard && createPortal(<BoardModal />, document.body)}
     </nav>
   )
 }
