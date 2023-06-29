@@ -2,9 +2,12 @@
 'use client'
 import './globals.css'
 import { Plus_Jakarta_Sans } from 'next/font/google'
-import HeaderComp from './components/header'
 import { ReactNode, useState } from 'react'
 import TabletModal from './components/tabletModal'
+import dynamic from 'next/dynamic'
+
+// importacion dinamica del header dado que debe usar el objeto "window" que esta disponible en el cliente y no en el server
+const HeaderComp = dynamic(() => import('./components/header'), { ssr: false })
 
 const plusJakartaSans = Plus_Jakarta_Sans({ subsets: ['latin'] })
 

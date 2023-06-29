@@ -32,7 +32,7 @@ export default function TaskModal () {
                 <SubTaskCard />
                 <SubTaskCard />
               </div>
-              <Button style='secondary' wi='full'>+add new task</Button>
+              <Button style='secondary' size='full'>+add new task</Button>
               <p className='opacity-60 font-bold text-xs pt-3 pb-1'>Status</p>
               <select name='status' className='w-full h-[40px] border-[1px] rounded-md mb-5'>
                 <option value=''>Selecciona una opción</option>
