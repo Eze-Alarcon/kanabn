@@ -5,15 +5,15 @@ import { Plus_Jakarta_Sans } from 'next/font/google'
 import HeaderComp from './components/header'
 import { ReactNode, useState } from 'react'
 import TabletModal from './components/tabletModal'
+// import { createPortal } from 'react-dom'
 
 const plusJakartaSans = Plus_Jakarta_Sans({ subsets: ['latin'] })
 
 export default function RootLayout ({ children }: {children: ReactNode}) {
   const [modalTablet, setModalTablet] = useState(false)
+  // const [modalBoard, setBoardModal] = useState(true)
 
-  const handleClick = () => {
-    if (modalTablet === false) { setModalTablet(true) } else { setModalTablet(false) }
-  }
+  const handleClick = () => setModalTablet(prevState => !prevState)
 
   return (
     <html lang='en'>
