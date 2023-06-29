@@ -1,18 +1,17 @@
-"use client";
+'use client'
 
-import React, { MouseEventHandler, useState } from 'react';
+import React, { MouseEventHandler, useState } from 'react'
 import Button from './button'
-
+import { createPortal } from 'react-dom'
 
 export default function HeaderComp ({ handleClick } : {handleClick: MouseEventHandler}) {
-const [modal, setModal] = useState(false);
-
+  const [modalBoard, setBoardModal] = useState(true)
 
   return (
     <nav className='w-full h-[64px] flex flex-row shadow-md lg:h-[96px] md:h-[80px] justify-between pr-7'>
       <div className=' mx-4 pr-4 flex items-center justify-center md:border-r border-solid border-opacity-10 border-kpurple'>
         <img className='md:hidden w-[34px] h-[35px] ' src='/styles/assets/logo-mobile.svg' alt='logo-mobile.svg' />
-        <img onClick={handleClick}className='hidden md:block cursor-pointer' src='/styles/assets/logo-dark.svg' alt='logo-dark.svg' />
+        <img onClick={handleClick} className='hidden md:block cursor-pointer' src='/styles/assets/logo-dark.svg' alt='logo-dark.svg' />
       </div>
 
       <div className='flex items-center font-bold text-xl mr-auto'>
@@ -26,7 +25,7 @@ const [modal, setModal] = useState(false);
         </div>
 
         <div className='hidden md:block'>
-          <Button style="primarylg">+add new task</Button>
+          <Button style='primarylg'>+add new task</Button>
         </div>
 
         <div className='ml-3'>
@@ -34,6 +33,7 @@ const [modal, setModal] = useState(false);
         </div>
 
       </div>
+      {modalBoard && createPortal(<div className='absolute h-[100svh] w-screen bg-gray-600 grid place-content-center bg-opacity-90'><p className='bg-red-500'>PORTAL</p></div>, document.body)}
     </nav>
   )
 }

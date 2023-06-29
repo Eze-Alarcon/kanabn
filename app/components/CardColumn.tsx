@@ -1,10 +1,6 @@
 import React, { ReactNode } from 'react'
 
-function CardColumn ({
-  children
-}: {
-  children: ReactNode
-}) {
+function CardColumn ({ children }: { children: ReactNode }) {
   return (
     <section className='grid'>
       <div className='flex h-4 justify-start gap-2 items-center'>
