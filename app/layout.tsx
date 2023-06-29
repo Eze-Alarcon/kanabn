@@ -10,7 +10,6 @@ const plusJakartaSans = Plus_Jakarta_Sans({ subsets: ['latin'] })
 
 export default function RootLayout ({ children }: {children: ReactNode}) {
   const [modalTablet, setModalTablet] = useState(false)
-  // const [modalBoard, setBoardModal] = useState(true)
 
   const handleClick = () => setModalTablet(prevState => !prevState)
 
@@ -18,7 +17,6 @@ export default function RootLayout ({ children }: {children: ReactNode}) {
     <html lang='en'>
       <body className={`${plusJakartaSans.className} flex flex-col h-[100svh]`}>
         <TabletModal handleClick={handleClick} modalTable={modalTablet} />
-
         <HeaderComp handleClick={handleClick} />
         <main className='w-full h-full bg-kcianli px-4 pt-6'>
           {children}

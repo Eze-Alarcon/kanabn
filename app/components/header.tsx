@@ -25,7 +25,7 @@ export default function HeaderComp ({ handleClick } : {handleClick: MouseEventHa
         </div>
 
         <div className='hidden md:block'>
-          <Button style='primarylg' wi={`${164}`}>+add new task</Button>
+          <Button style='primarylg'>+add new task</Button>
         </div>
 
         <div className='ml-3'>
