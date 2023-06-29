@@ -1,21 +1,22 @@
 import React from 'react'
 
-const Button = ({ children, style, wi, mdwi } :{children: React.ReactNode, style: string, wi?: string, mdwi?: string}) => {
-  const primarylg: string =
-  'bg-kpurple font-bold text-white pl-4 pr-4 w-full h-[48px] rounded-full capitalize hover:opacity-60 text-md duration-200 mx-auto'
-  const primarysm: string =
-  'bg-kpurple font-bold text-white pl-4 pr-4 w-full h-[40px] rounded-full capitalize hover:opacity-60 text-md duration-200 mx-auto'
-  const secondary: string =
-  'bg-kcian font-bold text-kpurple pl-4 pr-4 w-full h-[40px] rounded-full capitalize hover:opacity-60 text-md duration-200 mx-auto'
-  const destroy: string =
-  'bg-kred font-bold text-white pl-4 pr-4 w-full h-[40px] rounded-full capitalize hover:opacity-60 text-md duration-200 mx-auto'
-  if (style === 'primarylg') { style = primarylg }
-  if (style === 'primarysm') { style = primarysm }
-  if (style === 'secondary') { style = secondary }
-  if (style === 'delete') { style = destroy }
+const genericBtn = 'w-full h-10 px-4 rounded-full capitalize text-md duration-200 mx-auto font-bold'
+
+const btnStyle = {
+  btnPrimarylg: `${genericBtn} bg-kpurple text-white h-[48px] hover:bg-kpurpleli`,
+  btnPrimarysm: `${genericBtn} bg-kpurple text-white hover:bg-kpurpleli`,
+  btnSecondary: `${genericBtn} bg-kcian text-kpurple hover:bg-opacity-60`,
+  btnDelete: `${genericBtn} bg-kred text-white hover:bg-opacity-60`
+}
+
+const Button = ({ children, style, size } :{children: React.ReactNode, style: string, size?: string}) => {
+  if (style === 'primarylg') { style = btnStyle.btnPrimarylg }
+  if (style === 'primarysm') { style = btnStyle.btnPrimarysm }
+  if (style === 'secondary') { style = btnStyle.btnSecondary }
+  if (style === 'delete') { style = btnStyle.btnDelete }
 
   return (
-    <button className={style}>
+    <button className={`${style} ${size}`}>
       {children}
     </button>
   )

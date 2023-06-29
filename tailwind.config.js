@@ -14,6 +14,7 @@ module.exports = {
         kblackli: '#20212C',
         kblackli2: '#2B2C37',
         kgray: '#3E3F4E',
+        kgrayli: '#828FA3',
         kcian: '#E4EBFA',
         kcianli: '#F4F7FD',
         kwhite: '#FFFFFF',
@@ -36,6 +37,7 @@ module.exports = {
     }
   },
   plugins: [
-    require('tailwind-scrollbar')
+    require('tailwind-scrollbar'),
+    require('@tailwindcss/forms')
   ]
 }
