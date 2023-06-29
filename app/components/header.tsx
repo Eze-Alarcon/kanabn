@@ -5,7 +5,7 @@ import Button from './button'
 import { createPortal } from 'react-dom'
 
 export default function HeaderComp ({ handleClick } : {handleClick: MouseEventHandler}) {
-  const [modalBoard, setBoardModal] = useState(false)
+  const [modalBoard] = useState(false)
 
   return (
     <nav className='w-full h-[64px] flex flex-row shadow-md lg:h-[96px] md:h-[80px] justify-between pr-7'>
@@ -25,7 +25,7 @@ export default function HeaderComp ({ handleClick } : {handleClick: MouseEventHa
         </div>
 
         <div className='hidden md:block'>
-          <Button style='primarylg'>+add new task</Button>
+          <Button style='primarylg' wi={`${164}`}>+add new task</Button>
         </div>
 
         <div className='ml-3'>
