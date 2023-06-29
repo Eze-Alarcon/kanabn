@@ -5,7 +5,7 @@ export default function SubTaskCard () {
     <>
       <div className='flex pb-2'>
         <input
-          className='w-full h-[40px] border-[1px] pl-4 text-sm'
+          className='w-full h-10 pl-4 py-2 text-sm border-solid border-kgrayli border-[1px] rounded border-opacity-25 outline-kpurple'
           placeholder='e.g. Make coffee'
           type='text'
         />

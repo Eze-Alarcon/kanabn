@@ -1,12 +1,12 @@
 import React from 'react'
 
-const genericBtn = 'px-4 rounded-full capitalize hover:opacity-60 text-md duration-200 mx-auto font-bold w-full h-10'
+const genericBtn = 'w-full h-10 px-4 rounded-full capitalize text-md duration-200 mx-auto font-bold'
 
 const btnStyle = {
-  btnPrimarylg: `${genericBtn} bg-kpurple text-white h-[48px]`,
-  btnPrimarysm: `${genericBtn} bg-kpurple text-white`,
-  btnSecondary: `${genericBtn} bg-kcian text-kpurple`,
-  btnDelete: `${genericBtn} bg-kred text-white`
+  btnPrimarylg: `${genericBtn} bg-kpurple text-white h-[48px] hover:bg-kpurpleli`,
+  btnPrimarysm: `${genericBtn} bg-kpurple text-white hover:bg-kpurpleli`,
+  btnSecondary: `${genericBtn} bg-kcian text-kpurple hover:bg-opacity-60`,
+  btnDelete: `${genericBtn} bg-kred text-white hover:bg-opacity-60`
 }
 
 const Button = ({ children, style, size } :{children: React.ReactNode, style: string, size?: string}) => {
