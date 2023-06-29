@@ -1,12 +1,12 @@
 'use client'
 
 import React, { MouseEventHandler, useState } from 'react'
-import Button from './button'
 import { createPortal } from 'react-dom'
 import { BoardModal } from './BoardModal'
+import Button from './button'
 
 export default function HeaderComp ({ handleClick } : {handleClick: MouseEventHandler}) {
-  const [modalBoard, setBoardModal] = useState(false)
+  const [modalBoard, setBoardModal] = useState(true)
 
   return (
     <nav className='w-full h-[64px] flex flex-row shadow-md lg:h-[96px] md:h-[80px] justify-between pr-7'>
@@ -26,7 +26,7 @@ export default function HeaderComp ({ handleClick } : {handleClick: MouseEventHa
         </div>
 
         <div className='hidden md:block'>
-          <Button style='primarylg'>+add new task</Button>
+          <Button style='primarylg' size='h-10 max-w-[295px]'>+add new task</Button>
         </div>
 
         <div className='ml-3'>

@@ -1,7 +1,6 @@
 import React from 'react'
+import SubTaskCard from './subTaskCard'
 import Button from './button'
-
-const boardColumns = ['Todo', 'Doing']
 
 function BoardModal () {
   return (
@@ -11,14 +10,22 @@ function BoardModal () {
         <form className='grid gap-2'>
           <label htmlFor='boardName' className='text-sm font-bold text-kgrayli'>Board Name</label>
           <input type='text' id='boardName' name='boardName' placeholder='e.g. Web Design' className='w-full h-10 border-solid border-kgrayli border-[1px] rounded border-opacity-25 pl-4 py-2 outline-kpurple' />
-          <p className='text-sm font-bold text-kgrayli'>Board Columns</p>
-          <div>
-            <p>Todo</p>
-
+          <div className='grid gap-2 mt-4 mb-1'>
+            <p className='text-sm font-bold text-kgrayli'>Board Columns</p>
+            <div className='grid gap-2 overflow-y-auto max-h-28 scrollbar-thin scrollbar-thumb-kpurple scrollbar-corner-red-900'>
+              <SubTaskCard />
+              <SubTaskCard />
+              <SubTaskCard />
+              <SubTaskCard />
+              <SubTaskCard />
+              <SubTaskCard />
+              <SubTaskCard />
+              <SubTaskCard />
+            </div>
           </div>
 
-          <Button key='newColBtn' style='secondary'><p>+ Add New Column</p></Button>
-          <Button key='newBoardBtn' style='primarysm'><p>+ Add New Column</p></Button>
+          <Button key='newColBtn' style='secondary' size='max-w-[295px]'><p>+ Add New Column</p></Button>
+          <Button key='newBoardBtn' style='primarysm' size='max-w-[295px]'><p>Create New Board</p></Button>
         </form>
       </article>
     </div>

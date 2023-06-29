@@ -1,22 +1,22 @@
 import React from 'react'
 
-const Button = ({ children, style } :{children: React.ReactNode, style: string}) => {
-  const primarylg: string =
-  'bg-kpurple font-bold text-white pl-4 pr-4 w-[295px]  md:w-[200px] h-[48px] rounded-full capitalize hover:opacity-60 text-md duration-200 mx-auto;'
-  const primarysm: string =
-  'bg-kpurple font-bold text-white pl-4 pr-4 w-[295px]  md:w-[200px] h-[40px]  rounded-full capitalize hover:opacity-60 text-md duration-200 mx-auto;'
-  const secondary: string =
-  'bg-kcian font-bold text-kpurple pl-4 pr-4 w-[295px]  md:w-[200px] h-[40px]  rounded-full capitalize hover:opacity-60 text-md duration-200 mx-auto;'
-  const destroy: string =
-  'bg-kred font-bold text-white pl-4 pr-4 w-[295px]  md:w-[200px] h-[40px]  rounded-full capitalize hover:opacity-60 text-md duration-200 mx-auto;'
+const genericBtn = 'px-4 rounded-full capitalize hover:opacity-60 text-md duration-200 mx-auto font-bold w-full h-10'
 
-  if (style === 'primarylg') { style = primarylg }
-  if (style === 'primarysm') { style = primarysm }
-  if (style === 'secondary') { style = secondary }
-  if (style === 'delete') { style = destroy }
+const btnStyle = {
+  btnPrimarylg: `${genericBtn} bg-kpurple text-white h-[48px]`,
+  btnPrimarysm: `${genericBtn} bg-kpurple text-white`,
+  btnSecondary: `${genericBtn} bg-kcian text-kpurple`,
+  btnDelete: `${genericBtn} bg-kred text-white`
+}
+
+const Button = ({ children, style, size } :{children: React.ReactNode, style: string, size?: string}) => {
+  if (style === 'primarylg') { style = btnStyle.btnPrimarylg }
+  if (style === 'primarysm') { style = btnStyle.btnPrimarysm }
+  if (style === 'secondary') { style = btnStyle.btnSecondary }
+  if (style === 'delete') { style = btnStyle.btnDelete }
 
   return (
-    <button className={style}>
+    <button className={`${style} ${size}`}>
       {children}
     </button>
   )
