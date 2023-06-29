@@ -8,6 +8,5 @@ export default function Card () {
         <div className='text-sm pl-4 pb-3 font-bold'>0 de 3 Subtask</div>
       </section>
     </>
-
   )
 }

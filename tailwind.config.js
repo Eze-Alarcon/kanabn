@@ -21,11 +21,11 @@ module.exports = {
         kredli: '#FF9898'
       },
       fontSize: {
-        'xs': '12px',
-        'sm': '13px',
-        'md': '14px',
-        'lg': '18px',
-        'xl': '20px',
+        xs: '12px',
+        sm: '13px',
+        md: '14px',
+        lg: '18px',
+        xl: '20px'
       },
       backgroundImage: {
         'gradient-radial': 'radial-gradient(var(--tw-gradient-stops))',
@@ -35,5 +35,7 @@ module.exports = {
 
     }
   },
-  plugins: []
+  plugins: [
+    require('tailwind-scrollbar')
+  ]
 }
