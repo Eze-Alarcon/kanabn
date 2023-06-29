@@ -3,9 +3,9 @@ import React from 'react'
 export default function SubTaskCard () {
   return (
     <>
-      <div className='flex'>
+      <div className='flex pb-2'>
         <input
-          className='w-[264px] h-[40px] border-[1px]'
+          className='w-full h-[40px] border-[1px] pl-4 text-sm'
           placeholder='e.g. Make coffee'
           type='text'
         />
